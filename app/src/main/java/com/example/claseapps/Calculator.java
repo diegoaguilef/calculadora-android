@@ -16,13 +16,13 @@ public class Calculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-        txtResult = (TextView) findViewById(R.id.txtResult);
+        txtResult = (TextView) findViewById(R.id.txtResultCalc);
     }
 
     public void handleClick(View view){
         btn = ((Button) view);
         String btnValue = btn.getText().toString();
-        txtResult.setText(new StringBuilder().append(txtResult.getText().toString()).append(btnValue).toString());
+        txtResult.setText(txtResult.getText().toString() + (btnValue).toString());
 
     }
 }
